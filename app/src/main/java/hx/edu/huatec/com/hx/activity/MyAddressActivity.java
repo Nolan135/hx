@@ -1,0 +1,29 @@
+package hx.edu.huatec.com.hx.activity;
+
+import android.widget.TextView;
+
+import hx.edu.huatec.com.hx.R;
+import hx.edu.huatec.com.hx.comm.BaseActivity;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+
+public class MyAddressActivity extends BaseActivity {
+    @BindView(R.id.tv_title)
+    TextView tvTitle;
+
+    @Override
+    public int getContentViewId() {
+        return R.layout.activity_my_address;
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
+        tvTitle.setText("我的地址");
+    }
+    @OnClick(R.id.iv_back)
+    void close(){
+        finish();
+    }
+}
